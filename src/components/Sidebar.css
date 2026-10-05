@@ -1,0 +1,349 @@
+/* =================================
+   SIDEBAR
+================================= */
+
+.sidebar {
+  width: 420px;
+  min-width: 420px;
+
+  height: calc(100vh - 60px);
+
+  flex-shrink: 0;
+
+  background-color: #ffffff;
+
+  border-right: 1px solid #ddd;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+
+/* =================================
+   SEARCH BAR
+================================= */
+
+.chat-search {
+  margin: 12px 16px;
+
+  height: 42px;
+
+  flex-shrink: 0;
+
+  background-color: #f0f2f5;
+
+  border-radius: 8px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 14px;
+
+  color: #54656f;
+}
+
+.chat-search i {
+  font-size: 14px;
+}
+
+.chat-search input {
+  flex: 1;
+
+  min-width: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  margin-left: 12px;
+
+  font-size: 14px;
+}
+
+
+/* =================================
+   FILTER BUTTONS
+================================= */
+
+.chat-filters {
+  display: flex;
+
+  gap: 8px;
+
+  padding: 4px 16px 12px;
+
+  flex-shrink: 0;
+
+  border-bottom: 1px solid #eee;
+}
+
+.chat-filters button {
+  border: none;
+
+  background-color: #f0f2f5;
+
+  color: #54656f;
+
+  padding: 7px 14px;
+
+  border-radius: 18px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  transition: 0.2s;
+}
+
+.chat-filters button:hover {
+  background-color: #e2e6e8;
+}
+
+.chat-filters button.active {
+  background-color: #d9fdd3;
+
+  color: #008069;
+
+  font-weight: 600;
+}
+
+
+/* =================================
+   CHAT LIST
+================================= */
+
+.chat-list {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+/* =================================
+   CHAT ITEM
+================================= */
+
+.chat-item {
+  height: 72px;
+
+  padding: 8px 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+.chat-item:hover {
+  background-color: #f5f6f6;
+}
+
+
+/* =================================
+   PROFILE
+================================= */
+
+.profile-wrapper {
+  position: relative;
+
+  margin-right: 14px;
+
+  flex-shrink: 0;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  background-color: #dfe5e7;
+
+  color: #54656f;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+
+  font-weight: 600;
+}
+
+
+/* =================================
+   ONLINE DOT
+================================= */
+
+.online-dot {
+  position: absolute;
+
+  right: 1px;
+  bottom: 1px;
+
+  width: 12px;
+  height: 12px;
+
+  background-color: #25d366;
+
+  border: 2px solid white;
+
+  border-radius: 50%;
+}
+
+
+/* =================================
+   CHAT INFO
+================================= */
+
+.chat-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.chat-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 5px;
+}
+
+.chat-top h3 {
+  margin: 0;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  color: #111b21;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.chat-time {
+  color: #667781;
+
+  font-size: 12px;
+
+  margin-left: 10px;
+
+  white-space: nowrap;
+}
+
+.chat-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-width: 0;
+}
+
+.chat-bottom p {
+  margin: 0;
+
+  color: #667781;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =================================
+   UNREAD COUNT
+================================= */
+
+.unread-count {
+  min-width: 20px;
+  height: 20px;
+
+  padding: 0 5px;
+
+  margin-left: 8px;
+
+  flex-shrink: 0;
+
+  background-color: #25d366;
+
+  color: white;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+
+/* =================================
+   SELECTED CHAT
+================================= */
+
+.chat-item.selected {
+  background-color: #f0f2f5;
+}
+
+.chat-item.selected:hover {
+  background-color: #e9edef;
+}
+
+
+/* =================================================
+   MOBILE SIDEBAR
+================================================= */
+
+@media (max-width: 768px) {
+
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+
+    height: 100%;
+
+    border-right: none;
+
+    overflow: hidden;
+  }
+
+
+  .chat-list {
+    flex: 1;
+
+    min-height: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+}
